@@ -5,6 +5,7 @@ namespace txtr.core
 {
     public class TxtrHttpClient : ITxtrHttpClient
     {
+
         public async Task<string> GetResponseString(string uri)
         {
             var httpClient = new HttpClient();

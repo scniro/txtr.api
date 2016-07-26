@@ -17,14 +17,14 @@ namespace txtr.api.Controllers
             this.twilio = twilio;
         }
 
-        [EnableCors(origins: "*", headers: "*", methods: "*")]
+        [EnableCors(origins: "http://localhost:1000,http://txtr.azurewebsites.net", headers: "*", methods: "*")]
         [HttpGet]
         public IHttpActionResult Ping()
         {
             return Ok("alive");
         }
 
-        [EnableCors(origins: "*", headers: "*", methods: "*")]
+        [EnableCors(origins: "http://localhost:1000,http://txtr.azurewebsites.net", headers: "*", methods: "*")]
         [Route("Send")]
         public async Task<IHttpActionResult> Post([FromBody] string target)
         {
